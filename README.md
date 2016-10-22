@@ -4,7 +4,13 @@
 SimpleMediaPlayer을 개선하여 **OPENFILENAME**을 이용하여 미디어 파일을 **선택**하고, **필터 그래프**를 GRF 파일로 **저장**해봅니다.
 
 <p align="center">
-  <img src="https://github.com/devetude/SimpleMediaPlayer/blob/master/RunImages/run_screenshot.gif?raw=true" width="500"/>
+  <img src="https://github.com/devetude/SimpleMediaPlayer2/blob/master/RunImages/run_screenshot.gif?raw=true" width="500"/>
+</p>
+<p align="center">
+  <img src="https://github.com/devetude/SimpleMediaPlayer2/blob/master/RunImages/grf_file.png?raw=true" width="500"/>
+</p>
+<p align="center">
+  <img src="https://github.com/devetude/SimpleMediaPlayer2/blob/master/RunImages/filter_graph.png?raw=true" width="500"/>
 </p>
 
 #* 프로젝트를 시작하기 전에...
