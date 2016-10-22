@@ -71,7 +71,7 @@ SimpleMediaPlayer을 개선하여 **OPENFILENAME**을 이용하여 미디어 파
 > ```
 
 #* 필터 그래프를 GRF 파일로 저장하기
-> **필터 그래프를 GRF 파일로 저장**하는 작업을 하기 위한 코드는 아래와 같습니다.
+> **필터 그래프를 GRF 파일로 저장**하는 작업을 하기 위한 코드는 아래와 같습니다. **IStorage**, **IStream**, **IPersistStream**을 사용합니다.
 > ```c++
 > HRESULT SaveGraphFile(IGraphBuilder *pGraphBuilder, WAHR *wszPath) {
 >       // 스트림의 이름을 저장 할 변수
@@ -124,6 +124,25 @@ SimpleMediaPlayer을 개선하여 **OPENFILENAME**을 이용하여 미디어 파
 >       return hr;
 > }
 >  ```
+
+#* UNICODE 문자열을 MultiByte 문자열로 처리하기
+> SimpleMediaPlayer에서 소개 하였듯이 본 프로젝트는 **MultiByte 문자열**을 사용합니다. 따라서 UNICODE 문자열을 MultiByte 문자열로 변경해주는 작업이 필요합니다. 코드는 아래와 같습니다.
+> ```c++
+> // 전처리기를 이용하여 유니코드 일 경우 처리
+> #ifndef UNICODE
+>       // 변환 될 파일의 경로를 저장 할 변수
+>       WCHAR wFileName[MAX_PATH];
+>       
+>       // 문자열 변환
+>       MultiByteToWideChar(CP_ACP, 0, g_pathFileName, -1, wFileName, MAX_PATH);
+>       
+>       // 파일 그래프 매니져를 이용하여 랜더링
+>       hr = pGraphBuilder->RenderFile((LPCWSTR) wFileName, NULL);
+> #else
+>       // 파일 그래프 매니져를 이용하여 랜더링
+>       hr = pGraphBuilder->RenderFile((LPCWSTR) g_pathFileName, NULL);
+> #endif
+> ```
 
 #* 라이센스
 본 프로젝트는 Apache 2.0 License를 따릅니다. http://www.apache.org/licenses/LICENSE-2.0
