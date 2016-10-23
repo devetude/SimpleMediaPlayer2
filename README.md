@@ -29,6 +29,8 @@ SimpleMediaPlayer을 개선하여 **OPENFILENAME**을 이용하여 미디어 파
 >       OPENFILENAME ofn;
 >       
 >       // OPENFILENAME 속성 설정
+>       ofn.lSturctSize = sizeof(OPENFILENAME);
+>       
 >       ofn.hwndOwner = NULL;
 >       ofn.hInstance = NULL;
 >       ofn.lpstrFilter = NULL;
@@ -87,7 +89,7 @@ SimpleMediaPlayer을 개선하여 **OPENFILENAME**을 이용하여 미디어 파
 >       IStorage *pStorage = NULL;
 >       
 >       // IStorage 객체 인스턴스 생성
->       hr = StgCreateDocfile(wszPath, STGM_READWRITE, STGM_CREATE, STGM_SHARE_EXCLUSIVE, STGM_TRANSACTED);
+>       hr = StgCreateDocfile(wszPath, STGM_READWRITE | STGM_CREATE | STGM_SHARE_EXCLUSIVE | STGM_TRANSACTED, 0, &pStorage);
 >       
 >       if(FAILED(hr)) {
 >              return hr;
@@ -97,7 +99,7 @@ SimpleMediaPlayer을 개선하여 **OPENFILENAME**을 이용하여 미디어 파
 >       IStream *pStream = NULL;
 >       
 >       // IStorage 객체 인스턴스를 이용하여 IStream 객체 인스턴스 생성
->       hr = pStorage->CreateStream(wszStreamName, STGM_WIRTE, STGM_CREATE, STGM_SHARE_EXCLUSIVE, 0, 0, &pStream);
+>       hr = pStorage->CreateStream(wszStreamName, STGM_WIRTE | STGM_CREATE | STGM_SHARE_EXCLUSIVE, 0, 0, &pStream);
 >       
 >       if(FAILED(hr)) {
 >              // 자원 반납
