@@ -123,7 +123,7 @@ SimpleMediaPlayer을 개선하여 **OPENFILENAME**을 이용하여 미디어 파
 >        
 >       if(SUCCEEDED(hr)) {
 >              // IStorage 객체 인스턴스를 이용하여 커밋
->              hr = pStorage->Commit(STGM_DEFAULT);
+>              hr = pStorage->Commit(STGC_DEFAULT);
 >       }
 >       
 >       // 자원 반납
