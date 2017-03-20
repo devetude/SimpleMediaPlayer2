@@ -78,7 +78,7 @@ SimpleMediaPlayer을 개선하여 **OPENFILENAME**을 이용하여 미디어 파
 > }
 > ```
 
-#* 필터 그래프를 GRF 파일로 저장하기
+# 필터 그래프를 GRF 파일로 저장하기
 > **필터 그래프를 GRF 파일로 저장**하는 작업을 하기 위한 코드는 아래와 같습니다. **IStorage**, **IStream**, **IPersistStream**을 사용합니다.
 > ```c++
 > HRESULT SaveGraphFile(IGraphBuilder *pGraphBuilder, WAHR *wszPath) {
