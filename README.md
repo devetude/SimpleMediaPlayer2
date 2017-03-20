@@ -13,10 +13,10 @@ SimpleMediaPlayer을 개선하여 **OPENFILENAME**을 이용하여 미디어 파
   <img src="https://github.com/devetude/SimpleMediaPlayer2/blob/master/RunImages/filter_graph.png?raw=true" width="500"/>
 </p>
 
-#* 프로젝트를 시작하기 전에...
+# 프로젝트를 시작하기 전에...
 본 프로젝트는 **[SimpleMediaPlayer](https://github.com/devetude/SimpleMediaPlayer)** 프로젝트의 연장선에 있습니다. 따라서 SimpleMediaPlayer의 **READEME.md**를 먼저 읽어주세요.
 
-#* OPENFILENAME 사용하기
+# OPENFILENAME 사용하기
 > **OPENFILENAME**을 이용하여 미디어 파일의 **경로**와 **이름**을 불러오는 작업을 하기 위한 코드는 다음과 같습니다. OPENFILENAME 객체는 파일 탐색기의 모양이나, 필터링 여부 등을 결정하는 여러가지 속성들이 있습니다.
 > ```c++
 > // 미디어 파일의 경로와 이름을 저장하기 위한 전역 변수
@@ -133,7 +133,7 @@ SimpleMediaPlayer을 개선하여 **OPENFILENAME**을 이용하여 미디어 파
 > }
 >  ```
 
-#* UNICODE 문자열을 MultiByte 문자열로 처리하기
+# UNICODE 문자열을 MultiByte 문자열로 처리하기
 > SimpleMediaPlayer에서 소개 하였듯이 본 프로젝트는 **MultiByte 문자열**을 사용합니다. 따라서 UNICODE 문자열을 MultiByte 문자열로 변경해주는 작업이 필요합니다. 코드는 아래와 같습니다.
 > ```c++
 > // 전처리기를 이용하여 유니코드 일 경우 처리
@@ -152,10 +152,10 @@ SimpleMediaPlayer을 개선하여 **OPENFILENAME**을 이용하여 미디어 파
 > #endif
 > ```
 
-#* 라이센스
+# 라이센스
 본 프로젝트는 Apache 2.0 License를 따릅니다. http://www.apache.org/licenses/LICENSE-2.0
 
-#* 문의사항
+# 문의사항
 기타 문의사항이 있으실 경우 아래의 **문의 수단**으로 연락해주세요.
 > **문의 수단:**
 > - 메일 : **devetude@naver.com** 또는 **devetude@gmail.com**
